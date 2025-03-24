@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Contraseña | Salud Vital IPS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #CBDCEB;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #F3F3E0;
+            width: 50%;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+        select, input {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #133E87;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .btn:disabled {
+            background-color: #808080;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <h1>Salud Vital IPS</h1>
+    <div class="container">
+        <h2>Recuperar Contraseña</h2>
+        <p>Recupera tu contraseña en pocos pasos. Diligencia tu tipo y número de documento.</p>
+        <select id="tipoDocumento">
+            <option value="">Seleccione un tipo de documento</option>
+            <option value="CC">Cédula de Ciudadanía</option>
+            <option value="TI">Tarjeta de Identidad</option>
+            <option value="CE">Cédula de Extranjería</option>
+        </select>
+        <input type="text" id="numeroDocumento" placeholder="Número de Documento">
+        <br>
+        <button class="btn" onclick="recuperar()">Continuar</button>
+        <button class="btn" onclick="regresar()">Regresar</button>
+    </div>
+
+    <script>
+        function recuperar() {
+            let tipo = document.getElementById("tipoDocumento").value;
+            let numero = document.getElementById("numeroDocumento").value;
+            
+            if (tipo === "" || numero === "") {
+                alert("Por favor, completa todos los campos.");
+            } else {
+                alert("Se ha enviado un enlace de recuperación a tu correo.");
+            }
+        }
+
+        function regresar() {
+            window.location.href = "index.html"; // Cambiar por la URL correcta
+        }
+    </script>
+</body>
+</html>

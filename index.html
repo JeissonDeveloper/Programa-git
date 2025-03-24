@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud Vital IPS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F3F3E0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #133E87;
+            padding: 10px 20px;
+            color: white;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        .bienvenida, .gestion-citas {
+            padding: 20px;
+            text-align: center;
+        }
+        .gestion-citas {
+            background-color: #CBDCEB;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #133E87;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #608BC1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Salud Vital IPS">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Te ayudamos</a></li>
+                <li><a href="#">Encuéntranos</a></li>
+                <li><a href="#">Únete a Nosotros</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="bienvenida">
+            <h1>Gestiona tus citas Médicas Saludvital IPS</h1>
+            <p>¿Sabías que con un clic puedes agendar todas tus citas médicas? Aquí te enseñamos cómo hacerlo y qué tener en cuenta.</p>
+            <img src="paciente.png" alt="Paciente agendando cita">
+        </section>
+        <section class="gestion-citas">
+            <h2>Gestión de Citas Médicas</h2>
+            <p>Asignar, consultar o cancelar citas de medicina y odontología general, especialidades médicas, apoyos diagnósticos y laboratorios clínicos.</p>
+            <button id="ingresar">Ingresar</button>
+        </section>
+    </main>
+    <script>
+        document.getElementById("ingresar").addEventListener("click", function() {
+            alert("Redirigiendo a la gestión de citas médicas...");
+        });
+    </script>
+</body>
+</html>
